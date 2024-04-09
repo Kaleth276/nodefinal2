@@ -1,0 +1,35 @@
+<%-include('nav')%>
+<h1>listar Producto</h1>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="border p-4 rounded w-75">
+        <a href="/formulario" class="btn btn-success m-2">crear producto</a>
+
+<table class="table hover border">
+    <tr>
+        <th>referencia</th>
+        <th>nombre</th>
+        
+        <th>descripción</th>
+        <th>precio</th>
+        <th>stock</th>
+        <th>imagen</th>
+        <th>habilitado</th>
+    </tr>
+    <% listarProductos.forEach(producto=>{%>
+    <tr>
+        
+            <td><%=producto.referencia%></td>
+            <td><%=producto.nombre%></td>
+            <td><%=producto.descripcion%></td>
+            <td><%=producto.precio%></td>
+            <td><%=producto.stock%></td>
+            <td><%=producto.imagen%></td>
+            
+            <td><%=producto.habilitado%></td>
+            
+    </tr>
+    <% })%>
+</table>
+
+</div>
+</div>
